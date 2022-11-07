@@ -15,3 +15,11 @@ How many Sundays fell on the first of the month during the twentieth century (1 
 '''
 
 import math as m
+import calendar as c
+s = 0
+for year in range(1901,2001):
+    for month in range(1,13):
+        r = c.monthrange(year,month)
+        if r[0] == 6: s+=1
+
+print(s)
